@@ -252,6 +252,12 @@ body {
   }
 }
 
+@media (max-width: 575px) {
+  .menu-primary .btn {
+    padding: 16px 8px;
+  }
+}
+
 .main-site {
   padding: 8px;
 }
@@ -357,6 +363,16 @@ body {
   }
 }
 
+@media (max-width: 680px) {
+  .job-home .job-home--item + .job-home--item {
+    margin-top: 48px;
+  }
+
+  .job-home--image {
+    margin-top: 16px;
+  }
+}
+
 .job-home--image {
   max-width: 496px;
   width: 100%;
@@ -388,6 +404,11 @@ body {
   margin-left: 16px;
 }
 
+@media (max-width: 680px) {
+  .footer-site {
+    width: 95%;
+  }
+}
 
 /* PERFIL */
 
@@ -415,6 +436,13 @@ body {
   }
 }
 
+@media (max-width: 680px) {
+  .hero-perfil,
+  .hero-perfil--text {
+    flex-direction: column;
+  }
+}
+
 .hero-perfil--image {
   max-width: 487px;
   width: 100%;
@@ -429,8 +457,14 @@ body {
 
 .content-gap {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 40px;
+}
+
+@media (min-width: 680px) {
+  .content-gap {
+    flex-direction: row;
+  }
 }
 
 .content-maintitle {
