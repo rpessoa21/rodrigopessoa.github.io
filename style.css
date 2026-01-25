@@ -501,8 +501,24 @@ body {
   margin-top: 8px;
 }
 
-.content-image {
+.content-image, .telas-afirmativas.content-image p {
   text-align: center;
+}
+
+.content-image p {
+  padding: 10px 0;
+  text-align: left;
+}
+
+.content-image p:after {
+  background-color: var(--dark-pure);
+  content: '';
+  display: block;
+  height: 1px;
+  margin-top: 12px;
+  opacity: 0.3;
+  position: relative;
+  width: 100%;
 }
 
 .content-image img + img {
@@ -641,4 +657,52 @@ body {
 
 .telas-afirmativas p + p {
   margin-top: 40px;
+}
+
+
+/* big numbers */
+
+.big-numbers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin: 64px 0;
+}
+
+.big-numbers--col {
+  text-align: center;
+}
+
+.big-numbers--lg {
+  font-size: 3rem; /* destaque do número */
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.big-number--md {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .big-numbers {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.big-numbers--lg {
+  color: #0f172a; /* ajuste para sua identidade */
+}
+
+.big-number--md {
+  max-width: 220px;
+  margin: 0 auto;
+}
+
+.big-numbers--col {
+  padding: 16px;
 }
